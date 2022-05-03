@@ -1,0 +1,18 @@
+<!-- Creare un array con 15 numeri casuali, 
+tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
+<?php
+           $randomNumber =[];
+           while(count($randomNumber) <= 14){
+       
+               $random = rand(1,50);
+       
+               if(!in_array($random,$randomNumber)){
+       
+                   $randomNumber[] = $random;
+               };
+               
+           };
+           echo('<pre>');
+               var_dump($randomNumber);
+            echo('</pre>');
+    ?>
