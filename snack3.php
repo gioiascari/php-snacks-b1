@@ -15,4 +15,4 @@ tenendo conto che l’array non dovrà contenere lo stesso numero più di una vo
            echo('<pre>');
                var_dump($randomNumber);
             echo('</pre>');
-    ?>
+?>
