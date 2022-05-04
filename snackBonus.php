@@ -32,11 +32,17 @@
     
 
     for($i=0; $i < count($students); $i++){
+        $totalVote= count($students[$i]['votes']);
+        if($totalVote>0){
+            $sum = array_sum($students[$i]['votes'])/$totalVote;
+        }else{
+            $sum = '-';
+        }
      
      // Stampare Nome, Cognome 
         echo('<p>' . $students[$i]['name'] . $students[$i]['lastname'] . '</p>'); 
     // e la media dei voti di ogni alunno.
-        $sum = array_sum($students[$i]['votes'])/count($students[$i]['votes']);
+        // $sum = array_sum($students[$i]['votes'])/count($students[$i]['votes']);
         echo('<p>' . $sum . '</p>');
 
     };
